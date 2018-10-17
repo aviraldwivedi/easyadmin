@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <!-- <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet"> -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/daterangepicker-bs3.css" rel="stylesheet">
+</head>
+<style>
+
+</style>
+
+<body  id="k-body">
+    <div id="overlay">
+    </div>
+
+    <div onclick="fullProfilecClose()" id="overlay2">
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#" class="add-new-feed">
+            <i class="fa fa-plus"></i>
+        </a>
+        <footer class="sidenav-setings">
+            <a href="" class="sidenav-logout">
+                <i class="fa fa-gear "></i>
+            </a>
+        </footer>
+    </div>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side fix-nav" role="navigation" style="height:100%;">
+            <div class="sidebar-collapse">
+                <center class="header-logo">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+                          <img class="header-logo1" src="img/logo.png">
+                          </span>
+                </center>
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header lightBoxGallery">
+                        <div class="dropdown profile-element">
+                            <span>
+                                   <div class="">
+                                      <img alt="image" class="img-circle" src="img/userlogo.png" />
+                                      <!-- <i class="fa fa-home edit-profile"></i> -->
+                                      <img class="edit-profile" src="icons/home.svg">
+                                   </div>
+                                </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block"> <strong class="font-bold username-text">Raksha Vladimir</strong>
+                                </span> <span class="text-muted text-xs block">Super admin </span> </span>
+                            </a>
+                        </div>
+                        <div onclick="openNav()" class="logo-element">
+                            <img class="m-logo" src="img/m-logo.png">
+                        </div>
+                    </li>
+                    <h2 class="sidebar-menu-title">Menu</h2>
+                    <li class="active">
+                        <a href="index.html"><img class="left-bar-icon" src="icons/home1.svg"> <span class="nav-label">Dashboard</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="home_feed.html">News</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="home_feed.html"><img class="left-bar-icon" src="icons/people.svg"> <span class="nav-label">Feeds</span></a>
+                    </li>
+                    <li>
+                        <a href="today.html"><i class="fa fa-calendar"></i> <span class="nav-label">Event Calendar</span></a>
+                    </li>
+                    <li>
+                        <a href="today-talking-session.html"><i class="fa fa-diamond"></i> <span class="nav-label">Talking Session</span></a>
+                    </li>
+                    <li>
+                        <a href="home_choose_campuses.html"><i class="fa fa-check-square-o"></i> <span class="nav-label">Campus</span></a>
+                    </li>
+                    <li>
+                            <a href="pages/assets/index.html"><i class="fa fa-check-square-o"></i> <span class="nav-label">Gallery</span></a>
+                        </li>
+                </ul>
+                <!-- <ul>
+                          <li>
+                              <a href="">qqq</a>       
+                             </li>
+
+                          </ul> -->
+            </div>
+            <!-- <div class="logout-btn">
+                       <a href="">Log Out</a>    
+                       </div> -->
+            <footer id="logout" class="logout-btn">
+                <a href="">
+                       Logout
+                       </a>
+            </footer>
+        </nav>
+
+        <div id="page-wrapper" class="dashboard-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar white-bg  navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn no-bg hide-data " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search here..." class="form-control input-sm" name="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <button class="btn btn-success btn-xs edit-post-btn" type="button"><i class="fa fa-edit"></i></button>
+                        </li>
+                        <li>
+                            <button class="btn btn-success btn-xs new-post-btn" type="button"><i class="fa fa-plus"></i>&nbsp;New Post</button>
+                        </li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true">
+                                <i class="fa fa-bell"></i> <span class="label label-danger">7</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true">
+                                <i class="fa fa-wechat"></i></i> <span class="label label-success">2</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                     <a href="login.html">
+                         <i class="fa fa-sign-out"></i> Log out
+                     </a>
+                     </li> -->
+                        <li>
+                            <a id="my-overlay" class="right-sidebar-toggle">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <nav class="choose-campus-nav ">
+                <ul class="nav nav-tabs campus-nav-element">
+                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> All</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Aeesets</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">Task</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false">People</a></li>
+                </ul>
+            </nav>
+            <br>
+
+            <div calss="row">
+                <div class="col-lg-12">
+                    <div class="tabs-container">
+
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body campus-element">
+                                    <div class="">
+                                        <h5 class="new-feeds-title">Recent Events<a href="" class="pull-right"><small class="see-all-feeds">See all</small></a></h5>
+                                        <hr>
+                                        <div class="">
+
+                                            <a class="campus-row" href="#">
+                                                <div onclick="fullProfile()" class="recent-event-row">
+                                                    <div class="social-avatar">
+                                                        <img class="pull-left" alt="image" src="img/Oval1.png">
+                                                        <div class="media-body">
+                                                            <p href="#" class="students-login-title">
+                                                                finance Lession
+                                                            </p>
+                                                            <small class="feed-time-update">
+                                                            <i class="fa fa-map-marker"></i>
+                                                            USA Chicago, Avanue 56
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </a>
+
+                                            <a class="campus-row" href="#">
+                                                <div onclick="fullProfile()" class="recent-event-row">
+                                                    <div class="social-avatar">
+                                                        <img class="pull-left" alt="image" src="img/OvalCopy.png">
+                                                        <div class="media-body">
+                                                            <p href="#" class="students-login-title">
+                                                                finance Lession
+                                                            </p>
+                                                            <small class="feed-time-update">
+                                                        <i class="fa fa-map-marker"></i>
+                                                        USA Chicago, Avanue 56
+                                                        </small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </a>
+
+                                            <a class="campus-row" href="#">
+                                                <div onclick="fullProfile()" class="recent-event-row">
+                                                    <div class="social-avatar">
+                                                        <img class="pull-left" alt="image" src="img/OvalCopy2.png">
+                                                        <div class="media-body">
+                                                            <p href="#" class="students-login-title">
+                                                                finance Lession
+                                                            </p>
+                                                            <small class="feed-time-update">
+                                                        <i class="fa fa-map-marker"></i>
+                                                        USA Chicago, Avanue 56
+                                                        </small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </a>
+                                            <a class="campus-row" href="#">
+                                                <div onclick="fullProfile()" class="recent-event-row">
+                                                    <div class="social-avatar">
+                                                        <img class="pull-left" alt="image" src="img/OvalCopy4.png">
+                                                        <div class="media-body">
+                                                            <p href="#" class="students-login-title">
+                                                                finance Lession
+                                                            </p>
+                                                            <small class="feed-time-update">
+                                                            <i class="fa fa-map-marker"></i>
+                                                            USA Chicago, Avanue 56
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </a>
+                                            <a class="campus-row" href="#">
+                                                <div onclick="fullProfile()" class="recent-event-row">
+                                                    <div class="social-avatar">
+                                                        <img class="pull-left" alt="image" src="img/OvalCopy41.png">
+                                                        <div class="media-body">
+                                                            <p href="#" class="students-login-title">
+                                                                finance Lession
+                                                            </p>
+                                                            <small class="feed-time-update">
+                                                            <i class="fa fa-map-marker"></i>
+                                                            USA Chicago, Avanue 56
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <strong>Donec quam felis</strong>
+
+                                    <p>Thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath </p>
+
+                                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="right-sidebar" class="">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                <div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
+                    <div class=" feeds-header-box">
+                        <p class="feeds-header">
+                            Feeds
+                            <small class="pull-right">
+                     <a class="see-all-feeds" href="">
+                     See all
+                     </a>
+                     </small>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class=" tab-pane feeds-sidebar active">
+                            <div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Monica Smith</h2>
+                                            <p class="right-sidebar-feeds-time"> 5:60 pm - 12.06.2014</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">Holiday 17: business office student</h2>
+                                            <p class="feed-tag">Survey</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">25m </p>
+                                            <h2 class="feeds-user-title">Margot Robbi</h2>
+                                            <p class="right-sidebar-feeds-time">Working in the morning</p>
+                                        </div>
+                                        <div class="feed">
+                                            <div class="feed-img-box">
+                                                <img alt="image" class="img-responsive" src="img/feed-news.png">
+                                            </div>
+                                            <div class="">
+                                                <a class="feed-likes" herf="#">
+                                                    <i class="fa fa-heart"></i>25
+                                                </a>
+                                                <a class="feed-comments" href="#">
+                                                    <i class="fa fa-comments"></i>15
+                                                </a>
+                                                <a href="" class="feed-share">
+                                                    <i class="fa fa-share-square"></i>07
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Verna Ruiz</h2>
+                                            <p class="right-sidebar-feeds-time"> USA chicagob west 1/3</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">finance lesson</h2>
+                                            <p class="feed-tag">Event</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Cecelia lesson</h2>
+                                            <p class="right-sidebar-feeds-time"> 532 kb</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">Student Book</h2>
+                                            <p class="feed-tag">Docunmetn</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Cecelia lesson</h2>
+                                            <p class="right-sidebar-feeds-time"> 532 kb</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">Student Book</h2>
+                                            <p class="feed-tag">Docunmetn</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 63.8668px;"></div>
+                <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.4; z-index: 90; right: 1px;">
+                </div>
+            </div>
+        </div>
+
+        <div id="profile-view-slide" class="profile-view">
+            <p class="profile-header"><i class="fa fa-gear header-icon"></i><span class="header-close">
+            <i class="fa fa-share header-icon"></i>
+            <i onclick="fullProfilecClose()" class="fa fa-times header-icon"  ></i>
+         </span> </p>
+            <!-- <a href="javascript:void(0)" class="closebtn">&times;</a> -->
+
+            <div class="contaoner-flude">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="">
+                            <center>
+                                <img src="img/profile.png" class="img-circle circle-border m-b-md" alt="profile">
+                                <h1 class="profile-username">User name</h1>
+                                <h2 class="right-sidebar-feeds-time">last visted 2 days ago</h2>
+                                <br>
+                                <h2 class="event-name">Marketing manager</h2>
+                                <h2 class="right-sidebar-feeds-time">United State</h2>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-md-12 box-border-tb">
+                        <div class="col-md-4">
+                            <center class="padding-sm">
+                                <h1 class="profile-box-title">Event</h1>
+                                <h2 class="feed-time-update">056</h2>
+                            </center>
+                        </div>
+                        <div class="col-md-4 border-lr">
+                            <center class="padding-sm">
+                                <h1 class="profile-box-title">Task</h1>
+                                <h2 class="feed-time-update">054</h2>
+                            </center>
+                        </div>
+                        <div class="col-md-4">
+                            <center class="padding-sm">
+                                <h1 class="profile-box-title">Document</h1>
+                                <h2 class="feed-time-update">45</h2>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="profile-info-lable">Phone No<span class="profile-info">987654321</span></p>
+                        <hr class="margin-auto">
+                    </div>
+                    <div class="col-md-12">
+                        <p class="profile-info-lable">Email<span class="profile-info">jefferson@gmail.com</span></p>
+                        <hr class="margin-auto">
+                    </div>
+                    <div class="col-md-12">
+                        <p class="profile-info-lable">Birth Date<span class="profile-info">May 10 1993 </span></p>
+                        <hr class="margin-auto">
+                    </div>
+                    <div class="col-md-12">
+                        <p class="profile-info-lable">Program<span class="profile-info">0509 Graduate Online</span></p>
+                        <hr class="margin-auto">
+                    </div>
+                    <div class="col-md-12">
+                        <p class="profile-info-lable">Status<span class="profile-info">Enrolled</span></p>
+                    </div>
+                    <div class="col-md-12 box-border-tb">
+                        <div class="col-md-4 no-padding">
+                            <center class="padding-md">
+                                <i class="fa fa-calendar"></i>
+                                <h2 class="profile-footer-box">invite In Event</h2>
+                            </center>
+                        </div>
+                        <div class="col-md-4 border-lr no-padding">
+                            <center class="padding-md">
+                                <i class="fa fa-check-square-o"></i>
+                                <h2 class="profile-footer-box">Send a task</h2>
+                            </center>
+                        </div>
+                        <div class="col-md-4 no-padding">
+                            <center class="padding-md ">
+                                <i class="fa fa-wechat"></i>
+                                <h2 class="profile-footer-box">Send a messege</h2>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <center>
+                            <a class="btn btn-social-icon btn-google"><span class="fa fa-google"></span></a>
+                            <a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
+                            <a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- Flot -->
+        <script src="js/plugins/flot/jquery.flot.js"></script>
+        <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+        <script src="js/flowzoo.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+        <!-- Input Mask-->
+        <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+        <!-- Data picker -->
+        <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+        <!-- Date range use moment.js same as full calendar plugin -->
+        <script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+        <!-- Date range picker -->
+        <script src="js/daterangepicker.js"></script>
+
+
+         <!-- klassapp custom js -->
+         <script src="js/klassapp.js"></script>
+         
+         
+                 <!-- <script>
+                     $("#calendar").fullCalendar({
+                         header: {
+                             left: 'title',
+                             center: 'customDay,customWeek,customMonth,customYear,listYear',
+                             right: 'prev,today,next'
+                         },
+                         views: {
+                             customDay: {
+                                 type: 'agenda',
+                                 duration: {
+                                     day: 1
+                                 },
+                                 buttonText: 'Day'
+                             },
+                             customWeek: {
+                                 type: 'agenda',
+                                 duration: {
+                                     weeks: 1
+                                 },
+                                 buttonText: 'Week'
+                             },
+                             customMonth: {
+                                 type: 'basic',
+                                 duration: {
+                                     months: 1
+                                 },
+                                 buttonText: 'Month'
+                             },
+                             customYear: {
+                                 type: 'basic',
+                                 duration: {
+                                     years: 1
+                                 },
+                                 buttonText: 'Year'
+                             },
+                         },
+         
+         
+         
+                          // Add events
+                          editable: true, // event resources editable by default
+         
+                                     events: [
+                                 {
+                                 // startEditable : '12"00',
+         
+                                 title  : 'event1qq',
+                                 start:  '2018-05-03T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1',
+         
+                                 },
+         
+                                 {                       
+                                 title  : 'Audience',
+                                 start:  '2018-05-14',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#F5CD47'
+         
+                                 },
+                                 {                       
+                                 title  : 'Confrence',
+                                 start:  '2018-05-14',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+                                 {                        
+                                 title  : 'Metup',
+                                 start:  '2018-05-14',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+         
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-16T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+                                 {                        
+                                 title  : 'event1',
+                                 start:  '2018-05-16T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+         
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-25T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+                                 {                        
+                                 title  : 'event1',
+                                 start:  '2018-05-25T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+         
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-29T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+                                 {                        
+                                 title  : 'event1',
+                                 start:  '2018-05-29T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+         
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-31T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+                                 {                        
+                                 title  : 'event1',
+                                 start:  '2018-05-31T14:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+         
+                                 {
+                                 title  : 'event2',
+                                 start  : '2010-01-05',
+                                 end    : '2010-01-07'
+                                 },
+         
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-15T06:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-15T06:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+         
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-13T16:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#04A1EF'
+         
+                                 },
+                                 {                       
+                                 title  : 'event1',
+                                 start:  '2018-05-13T16:30:00',
+                                 backgroundColor: '#EFF3F6',
+                                 textColor: '#334150',
+                                 borderColor:'#CF84E1'
+         
+                                 },
+         
+                             ]
+                         // Add events ends 
+         
+                     });
+                 </script> -->
+         
+                 <script>
+                     $(document).ready(function() {
+         
+                        //  $('.i-checks').iCheck({
+                        //      checkboxClass: 'icheckbox_square-green',
+                        //      radioClass: 'iradio_square-green'
+                        //  });
+         
+                         /* initialize the external events
+                          -----------------------------------------------------------------*/
+         
+                         $('#external-events div.external-event').each(function() {
+         
+                             // store data so the calendar knows to render an event upon drop
+                             $(this).data('event', {
+                                 title: $.trim($(this).text()), // use the element's text as the event title
+                                 stick: true // maintain when user navigates (see docs on the renderEvent method)
+                             });
+         
+                             // make the event draggable using jQuery UI
+                             $(this).draggable({
+                                 zIndex: 1111999,
+                                 revert: true, // will cause the event to go back to its
+                                 revertDuration: 0 //  original position after the drag
+                             });
+         
+                         });
+         
+                         /* initialize the calendar
+                          -----------------------------------------------------------------*/
+                         var date = new Date();
+                         var d = date.getDate();
+                         var m = date.getMonth();
+                         var y = date.getFullYear();
+         
+                        //  $('#calendar').fullCalendar({
+                        //      header: {
+                        //          left: 'prev,next today',
+                        //          center: 'title',
+                        //          right: 'month,agendaWeek,agendaDay'
+                        //      },
+                        //      editable: true,
+                        //      droppable: true, // this allows things to be dropped onto the calendar
+                        //      drop: function() {
+                        //          // is the "remove after drop" checkbox checked?
+                        //          if ($('#drop-remove').is(':checked')) {
+                        //              // if so, remove the element from the "Draggable Events" list
+                        //              $(this).remove();
+                        //          }
+                        //      },
+                        //      events: [{
+                        //          title: 'All Day Event',
+                        //          start: new Date(y, m, 1)
+                        //      }, {
+                        //          title: 'Long Event',
+                        //          start: new Date(y, m, d - 5),
+                        //          end: new Date(y, m, d - 2)
+                        //      }, {
+                        //          id: 999,
+                        //          title: 'Repeating Event',
+                        //          start: new Date(y, m, d - 3, 16, 0),
+                        //          allDay: false
+                        //      }, {
+                        //          id: 999,
+                        //          title: 'Repeating Event',
+                        //          start: new Date(y, m, d + 4, 16, 0),
+                        //          allDay: false
+                        //      }, {
+                        //          title: 'Meeting',
+                        //          start: new Date(y, m, d, 10, 30),
+                        //          allDay: false
+                        //      }, {
+                        //          title: 'Lunch',
+                        //          start: new Date(y, m, d, 12, 0),
+                        //          end: new Date(y, m, d, 14, 0),
+                        //          allDay: false
+                        //      }, {
+                        //          title: 'Birthday Party',
+                        //          start: new Date(y, m, d + 1, 19, 0),
+                        //          end: new Date(y, m, d + 1, 22, 30),
+                        //          allDay: false
+                        //      }, {
+                        //          title: 'Click for Google',
+                        //          start: new Date(y, m, 28),
+                        //          end: new Date(y, m, 29),
+                        //          url: 'http://google.com/'
+                        //      }]
+                        //  });
+         
+                     });
+                 </script>
+         
+                 <script>
+                     $(document).ready(function() {
+                        //  setTimeout(function() {
+                        //      toastr.options = {
+                        //          closeButton: true,
+                        //          progressBar: true,
+                        //          showMethod: 'slideDown',
+                        //          timeOut: 4000
+                        //      };
+                        //      toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+         
+                        //  }, 1300);
+         
+                         var data1 = [
+                             [0, 4],
+                             [1, 8],
+                             [2, 5],
+                             [3, 10],
+                             [4, 4],
+                             [5, 16],
+                             [6, 5],
+                             [7, 11],
+                             [8, 6],
+                             [9, 11],
+                             [10, 30],
+                             [11, 10],
+                             [12, 13],
+                             [13, 4],
+                             [14, 3],
+                             [15, 3],
+                             [16, 6]
+                         ];
+                         var data2 = [
+                             [0, 1],
+                             [1, 0],
+                             [2, 2],
+                             [3, 0],
+                             [4, 1],
+                             [5, 3],
+                             [6, 1],
+                             [7, 5],
+                             [8, 2],
+                             [9, 3],
+                             [10, 2],
+                             [11, 1],
+                             [12, 0],
+                             [13, 2],
+                             [14, 8],
+                             [15, 0],
+                             [16, 0]
+                         ];
+                         $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                             data1, data2
+                         ], {
+                             series: {
+                                 lines: {
+                                     show: false,
+                                     fill: true
+                                 },
+                                 splines: {
+                                     show: true,
+                                     tension: 0.4,
+                                     lineWidth: 1,
+                                     fill: 0.4
+                                 },
+                                 points: {
+                                     radius: 0,
+                                     show: true
+                                 },
+                                 shadowSize: 2
+                             },
+                             grid: {
+                                 hoverable: true,
+                                 clickable: true,
+                                 tickColor: "#d5d5d5",
+                                 borderWidth: 1,
+                                 color: '#d5d5d5'
+                             },
+                             colors: ["#1ab394", "#1C84C6"],
+                             xaxis: {},
+                             yaxis: {
+                                 ticks: 4
+                             },
+                             tooltip: false
+                         });
+         
+                         var doughnutData = {
+                             labels: ["App", "Software", "Laptop"],
+                             datasets: [{
+                                 data: [300, 50, 100],
+                                 backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                             }]
+                         };
+         
+                         var doughnutOptions = {
+                             responsive: false,
+                             legend: {
+                                 display: false
+                             }
+                         };
+         
+                        //  var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+                        //  new Chart(ctx4, {
+                        //      type: 'doughnut',
+                        //      data: doughnutData,
+                        //      options: doughnutOptions
+                        //  });
+         
+                         var doughnutData = {
+                             labels: ["App", "Software", "Laptop"],
+                             datasets: [{
+                                 data: [70, 27, 85],
+                                 backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                             }]
+                         };
+         
+                         var doughnutOptions = {
+                             responsive: false,
+                             legend: {
+                                 display: false
+                             }
+                         };
+         
+                        //  var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
+                        //  new Chart(ctx4, {
+                        //      type: 'doughnut',
+                        //      data: doughnutData,
+                        //      options: doughnutOptions
+                        //  });
+         
+                     });
+                 </script>
+                 
+
+</body>
+
+</html>

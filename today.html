@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <!-- <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet"> -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/daterangepicker-bs3.css" rel="stylesheet">
+    <!-- clockpicker css -->
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <!-- full calendar -->
+    <link href="css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
+    <!--  for dropzone -->
+    <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
+    <!-- for file upload -->
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    
+
+</head>
+<style>
+}
+</style>
+
+<body id="k-body">
+    <div id="overlay">
+    </div>
+    <div onclick="talking_session_close()" id="talking-overlay">
+    </div>
+
+    <div onclick="calender_new_event_close()" id="overlay2">
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#">Lorem Ipsum is simply dummy simply dummy </a>
+        <a href="#" class="add-new-feed">
+            <i class="fa fa-plus"></i>
+        </a>
+        <footer class="sidenav-setings">
+            <a href="" class="sidenav-logout">
+                <i class="fa fa-gear "></i>
+            </a>
+        </footer>
+    </div>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side fix-nav" role="navigation" style="height:100%;">
+            <div class="sidebar-collapse">
+                <center class="header-logo">
+                    <span id="sidenav" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                          <img class="header-logo1" src="img/logo.png">
+                          </span>
+                </center>
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header lightBoxGallery">
+                        <div class="dropdown profile-element">
+                            <span>
+                                   <div class="">
+                                      <img alt="image" class="img-circle" src="img/userlogo.png" />
+                                      <!-- <i class="fa fa-home edit-profile"></i> -->
+                                      <img class="edit-profile" src="icons/home.svg">
+                                   </div>
+                                </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block"> <strong class="font-bold username-text">Raksha Vladimir</strong>
+                                </span> <span class="text-muted text-xs block">Super admin </span> </span>
+                            </a>
+                        </div>
+                        <div onclick="openNav()" class="logo-element">
+                            <img class="m-logo" src="img/m-logo.png">
+                        </div>
+                    </li>
+                    <h2 class="sidebar-menu-title">Menu</h2>
+                    <li class="active">
+                        <a href="index.html"><img class="left-bar-icon" src="icons/home1.svg"><span class="nav-label">Dashboard</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="home_feed.html">News</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="home_feed.html"><img class="left-bar-icon" src="icons/people.svg"> <span class="nav-label">Feeds</span></a>
+                    </li>
+                    <li>
+                        <a href="today.html"><i class="fa fa-calendar"></i> <span class="nav-label">Event Calendar</span></a>
+                    </li>
+                    <li>
+                        <a href="today-talking-session.html"><i class="fa fa-diamond"></i> <span class="nav-label">Talking Session</span></a>
+                    </li>
+                    <li>
+                        <a href="home_choose_campuses.html"><i class="fa fa-check-square-o"></i> <span class="nav-label">Campus</span></a>
+                    </li>
+                    <li>
+                            <a href="pages/assets/index.html"><i class="fa fa-check-square-o"></i> <span class="nav-label">Gallery</span></a>
+                        </li>
+                </ul>
+                <!-- <ul>
+                          <li>
+                              <a href="">qqq</a>       
+                             </li>
+
+                          </ul> -->
+            </div>
+            <!-- <div class="logout-btn">
+                       <a href="">Log Out</a>    
+                       </div> -->
+            <footer id="logout" class="logout-btn">
+                <a href="">
+                       Logout
+                       </a>
+            </footer>
+        </nav>
+
+        <div id="page-wrapper" class="dashboard-bg dashbard-1 today-wraper">
+
+            <div class="row border-bottom">
+                <nav id="page-nav" class="navbar white-bg  navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn no-bg hide-data " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search here..." class="form-control input-sm" name="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <button class="btn btn-success btn-xs edit-post-btn" type="button"><i class="fa fa-edit"></i></button>
+                        </li>
+                        <li>
+                            <button id="new-e-btn" class="btn btn-success btn-xs new-post-btn" type="button"><i class="fa fa-plus"></i>&nbsp;New Post</button>
+                        </li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true">
+                                <i class="fa fa-bell"></i> <span class="label label-danger">7</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent-notification-row">
+                                        <div class="pull-right dropdown">
+                                            <img alt="image" src="img/Rectangle2.png">
+                                        </div>
+                                        <div class="social-avatar">
+                                            <a href="" class="pull-left notification-icon-padding">
+                                                <i class="fa fa-heart notofication-icon"></i>
+                                            </a>
+                                            <div class="media-body notification-body-padding">
+                                                <a href="#" class="notofication-title">
+                                    finance Lession
+                                    </a>
+                                                <small class="feed-time-update">
+                                    5 second ago
+                                    </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#" aria-expanded="true">
+                                <i class="fa fa-wechat"></i></i> <span class="label label-success">2</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                     <a href="login.html">
+                         <i class="fa fa-sign-out"></i> Log out
+                     </a>
+                     </li> -->
+                        <li>
+                            <a id="my-overlay" class="right-sidebar-toggle">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <nav class="choose-campus-nav calandar-panal">
+                <ul class="nav nav-tabs calandar-nav-element">
+                    <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> Calandar</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Upcoming Event</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">Past Events</a></li>
+                </ul>
+            </nav>
+            <br>
+
+            <div calss="row">
+                <div class="">
+                    <div class="tabs-container">
+
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div>
+                                    <div class="form-group">
+                                        <div class="col-sm-2 col-xs-12">
+                                            <select class="input-bg-light form-control m-b" name="account">
+                                                <option>Campus</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                                <option>option 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-9">
+                                            <div class="btn-group">
+                                                <button class="btn btn-outline btn-default input-bg-light" type="button">Personal</button>
+                                                <button class="btn btn-outline btn-default input-bg-light" type="button">Global</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-xs-3">
+                                            <button onclick="calender_new_event()" class="btn add-new-feed-btn btn-md pull-right" type="button">
+                                                <i class="fa fa-plus"></i> New
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                </div>
+
+                                <div class="wrapper wrapper-content">
+                                    <div class="row animated fadeInDown">
+
+                                        <div class="col-lg-12">
+                                            <div class="ibox float-e-margins">
+                                                <div class="ibox-content">
+                                                    <div id="calendar" class="fc fc-unthemed fc-ltr">
+                                                        <div class="fc-toolbar">
+                                                        </div>
+                                                        <div class="fc-view-container" style="">
+                                                            <div class="fc-view fc-month-view fc-basic-view" style="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="">
+                                    <div>
+                                        <div class="form-group">
+                                            <div class="col-sm-2">
+                                                Short By
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <select class="input-bg-light form-control m-b" name="account">
+                                                    <option>Campus</option>
+                                                    <option>option 2</option>
+                                                    <option>option 3</option>
+                                                    <option>option 4</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <!-- <button onclick="talking_session()">Talking Session</button> -->
+                                                <button onclick="calender_new_event()" class="btn add-new-feed-btn btn-md pull-right" type="button">
+                                                    <i class="fa fa-plus"></i> New
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line-dashed"></div>
+                                    </div>
+
+                                    <div class="ibox-content table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Image</th>
+                                                    <th>Title</th>
+                                                    <th>Title</th>
+                                                    <th>Date</th>
+                                                    <th>Location</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/Pic.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Olivia caltillo</h1>
+                                                        <h2 class="table-user-profile">Student</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Finance Lession </td>
+                                                    <td class="table-user-profile ue-table">May 10 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>Design room 3rd floor</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/Pic1.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Mable Henry</h1>
+                                                        <h2 class="table-user-profile">Student</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Scince Conference</td>
+                                                    <td class="table-user-profile ue-table">May 07 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>West room 23</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/Pic2.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Keith Hawkins</h1>
+                                                        <h2 class="table-user-profile">Teacher</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Management</td>
+                                                    <td class="table-user-profile ue-table">May 05 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>Audience room12</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/Pic3.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Alma Silva</h1>
+                                                        <h2 class="table-user-profile">Admin</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Audience</td>
+                                                    <td class="table-user-profile ue-table">May 05 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>Confrence hall 2nd floor</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/PicCopy.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Gordon Farmer</h1>
+                                                        <h2 class="table-user-profile">Teacher</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Marketing</td>
+                                                    <td class="table-user-profile">May 05 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>Room 315 3rd floor</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/PicCopy2.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Ina Show</h1>
+                                                        <h2 class="table-user-profile">Teacher</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">MetUp</td>
+                                                    <td class="table-user-profile">May 05 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>Room 215 2nd flooor</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/PicCopy3.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Ophelia White</h1>
+                                                        <h2 class="table-user-profile">Student</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Meating Session</td>
+                                                    <td class="table-user-profile">May 03 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>East Hall 15</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/PicCopy4.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Cecilia French</h1>
+                                                        <h2 class="table-user-profile">Student</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Talking Session</td>
+                                                    <td class="table-user-profile">May 03 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>East Hall 15</td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/PicCopy5.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Elnora Hampton</h1>
+                                                        <h2 class="table-user-profile">Admin</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Training</td>
+                                                    <td class="table-user-profile ue-table">Apr 25 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i>Room 515 </td>
+                                                </tr>
+                                                <tr onclick="talking_session()" class="upcomming-event-user">
+                                                    <td><img src="img/PicCopy6.png"></td>
+                                                    <td>
+                                                        <h1 class="table-username">Leila Lyons</h1>
+                                                        <h2 class="table-user-profile">Admin</h2>
+                                                    </td>
+                                                    <td class="table-user-profile ue-table">Training</td>
+                                                    <td class="table-user-profile ue-table">Apr 22 2017</td>
+                                                    <td class="table-user-profile"><i class="u-event-table fa fa-map-marker"></i> Room 101</td>
+                                                </tr>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="5" class="footable-visible">
+                                                            <center>
+                                                                <ul class="pagination ">
+
+                                                                    <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li>
+                                                                    <li class="footable-page active"><a data-page="0" href="#">1</a></li>
+                                                                    <li class="footable-page"><a data-page="1" href="#">2</a></li>
+                                                                    <li class="footable-page"><a data-page="1" href="#">3</a></li>
+                                                                    <li class="footable-page"><a data-page="1" href="#">4</a></li>
+                                                                    <li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li>
+
+                                                                </ul>
+                                                            </center>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+                    <!-- New Event Right Sidebar  -->
+                    <div id="calender_new_event_slide" class="event-creator">
+                        <div class="col-sm-2">
+                            <i onclick="calender_new_event_close()" class="fa fa-times header-icon-border"></i>
+                        </div>
+                        <div class="col-sm-8">
+                            <center class="today-form-title">
+                                New Event
+                            </center>
+                        </div>
+                        <div class="col-ms-2">
+        
+                        </div>
+        
+                        <!-- <a href="javascript:void(0)" class="closebtn">&times;</a> -->
+        
+                        <div class="">
+                            <div class="form-group">
+                                <label class="col-sm-12">Title <span class="red"> *</span></label>
+                                <div class="col-sm-12">
+                                    <div class="m-b">
+                                        <input type="text" placeholder="New Event Name" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="col-sm-12">
+                                            <label class="">Location<span class="red"> *</span></label>
+                                            <div class="input-group m-b">
+                                                <input type="text" placeholder="Columbia Road" class="form-control"><span class="input-group-addon"><i class="fa fa-map-marker"></i></span> </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <label class="">Zip<span class="red"> *</span></label>
+                                            <div class="input-group m-b">
+                                                <input type="text" placeholder="77079" class="form-control"><span class="input-group-addon"><i class="fa fa-map-marker"></i></span> </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-6" style=" display: inline-table; float: right; ">
+                                        <label class="col-sm-12">Thumbnail Image<span class="red"> *</span></label>
+
+                                        <form action="#" class="dropzone dz-clickable" id="dropzoneForm">
+                                            <div class="dz-default dz-message"><span></span></div>
+                                        </form>
+                                        <button class="add-new-thumb vertical-allign-bottom">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        <span class="click-to-add vertical-allign-bottom">Click To add </span>
+                                    </div>
+                                    <!-- <div class="col-sm-2">
+                                        
+                                    </div> -->
+        
+                                </div>
+                                <!-- <label class="col-sm-12 control-label">Location<span class="red"> *</span></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group m-b">
+                                            <input type="text" class="form-control"> <span class="input-group-addon">.00</span></div>
+                                    </div> -->
+                            </div>
+        
+                            <div class="form-group">
+                                <label class="col-sm-12">Category<span class="red"> *</span></label>
+                                <div class="col-sm-12">
+                                    <select class="form-control m-b" name="account">
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                            <!-- <div class="form-group">
+                                    <label class="col-sm-12">Tags<span class="red"> *</span></label>
+                                    <div class="col-sm-12">
+                                        <select class="form-control m-b" name="account">
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+        
+                            <div class="col-sm-6">
+                                <div class="form-group" id="data_1">
+                                    <label>Start Date<span class="red"> *</span></label>
+                                    <div class="input-group date">
+                                        <input type="text" class="form-control" value="03/04/2014"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-6">
+                                <div class="form-group" id="data_1">
+                                    <label>End Date<span class="red"> *</span></label>
+                                    <div class="input-group date">
+                                        <input type="text" class="form-control" value="03/04/2014"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-6">
+                                <label>Start Time<span class="red"> *</span></label>
+                                <div class="input-group clockpicker" data-autoclose="true">
+                                    <input type="text" class="form-control" value="09:30">
+                                    <span class="input-group-addon">
+                                            <span class="fa fa-clock-o"></span>
+                                    </span>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-6">
+                                <label>End Time<span class="red"> *</span></label>
+                                <div class="input-group clockpicker" data-autoclose="true">
+                                    <input type="text" class="form-control" value="09:30">
+                                    <span class="input-group-addon">
+                                            <span class="fa fa-clock-o"></span>
+                                    </span>
+                                </div>
+                            </div>
+        
+                            <!-- <div class="form-group">
+                                    <label class="col-sm-12">Title<span class="red"> *</span></label>
+                                    <div class="col-sm-11">
+                                        <select class="form-control m-b" name="account">
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button class="btn btn-success btn-xs edit-post-btn" type="button">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </div> -->
+        
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="comment">Description<span class="red"> *</span></label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    <!-- <input type="file" name="pic" accept="image/*"> -->
+        
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <label class="col-sm-12">Booking Url<span class="red"> *</span></label>
+                                <div class="col-sm-12">
+                                    <div class="m-b">
+                                        <input type="text" placeholder="www.newevent.com" class="form-control">
+                                    </div>
+                                    <p class="">
+                                        <span>
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                <span class="btn-file"><span class="fileinput-new"> 
+                                                    <i class="fa fa-paperclip"></i> Add Attachment
+                                                </span>
+                                                <span class="fileinput-exists">Change</span><input type="file" name="..."/></span>
+                                                <span class="fileinput-filename"></span>
+                                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
+                                            </div> 
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="">
+                            <div class="today-form-btn col-sm-12">
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-success btn-block btn-outline btn-default">Cancle</button>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-success btn-block ">Create Event</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- new Event right sidebar -->
+        
+                    <!-- talking Sessioon slide -->
+        
+                    <div id="taliking_session_slide" class=" event-creator profile-view">
+                        <div class="col-sm-2">
+                            <i onclick="talking_session_close()" class="fa fa-times header-icon-border"></i>
+                        </div>
+                        <div class="col-sm-8">
+        
+                        </div>
+                        <div class="col-ms-2">
+        
+                        </div>
+        
+                        <!-- <a href="javascript:void(0)" class="closebtn">&times;</a> -->
+        
+                        <div class="col-sm-12 box-one">
+                            <h1 class="t-session-title">
+                                    Talking Session
+                                </h1>
+                            <p class="t-session-subtitle">
+                                Design Room 3rd floor
+                            </p>
+                        </div>
+        
+                        <div class="col-sm-12 box-two">
+                            <p class="talking-date">
+                                Wednesday ,May 24
+                            </p>
+                            <p class="talking-time">
+                                8:00 am - 11:00 pm
+                            </p>
+                        </div>
+        
+                        <div class="col-sm-12 box-two">
+                            <p class="talking-info-title">
+                                Title
+                            </p>
+                            <p class="talking-info">
+                                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                            </p>
+                        </div>
+        
+                        <div class="col-sm-12 box-two">
+                            <p class="talking-info-title">
+                                Involved
+                            </p>
+        
+                            <div class="involved">
+                                <a href=""><img alt="image" class="img-circle" src="img/profile_small.jpg"></a>
+                                <a href=""><img alt="image" class="img-circle" src="img/profile_small.jpg"></a>
+                                <a href=""><img alt="image" class="img-circle" src="img/profile_small.jpg"></a>
+                            </div>
+        
+                        </div>
+        
+                        <div class="col-sm-12 box-two">
+                            <p class="talking-info-title">
+                                Attachment
+                            </p>
+                            <p class="attachment">
+                                <span><i class="fa fa-paperclip"></i> Finance Student Book.pdf </span>
+                            </p>
+                        </div>
+        
+                        <div class="">
+                            <div class="today-form-btn col-sm-12">
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-success btn-block btn-outline btn-default">Decline</button>
+                                </div>
+        
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-success btn-block ">Accept</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <!-- talking session slide -->
+
+
+        <div id="right-sidebar" class="">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                <div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
+                    <div class=" feeds-header-box">
+                        <p class="feeds-header">
+                            Feeds
+                            <small class="pull-right">
+                     <a class="see-all-feeds" href="">
+                     See all
+                     </a>
+                     </small>
+                        </p>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class=" tab-pane feeds-sidebar active">
+                            <div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Monica Smith</h2>
+                                            <p class="right-sidebar-feeds-time"> 5:60 pm - 12.06.2014</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">Holiday 17: business office student</h2>
+                                            <p class="feed-tag">Survey</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">25m </p>
+                                            <h2 class="feeds-user-title">Margot Robbi</h2>
+                                            <p class="right-sidebar-feeds-time">Working in the morning</p>
+                                        </div>
+                                        <div class="feed">
+                                            <div class="feed-img-box">
+                                                <img alt="image" class="img-responsive" src="img/feed-news.png">
+                                            </div>
+                                            <div class="">
+                                                <a class="feed-likes" herf="#">
+                                                    <i class="fa fa-heart"></i>25
+                                                </a>
+                                                <a class="feed-comments" href="#">
+                                                    <i class="fa fa-comments"></i>15
+                                                </a>
+                                                <a href="" class="feed-share">
+                                                    <i class="fa fa-share-square"></i>07
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Verna Ruiz</h2>
+                                            <p class="right-sidebar-feeds-time"> USA chicagob west 1/3</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">finance lesson</h2>
+                                            <p class="feed-tag">Event</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Cecelia lesson</h2>
+                                            <p class="right-sidebar-feeds-time"> 532 kb</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">Student Book</h2>
+                                            <p class="feed-tag">Docunmetn</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-message">
+                                    <div class="feed-element">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/feeds-user.png">
+                                        </a>
+                                        <div class="media-body ">
+                                            <p class="pull-right feed-time-update">5m </p>
+                                            <h2 class="feeds-user-title">Cecelia lesson</h2>
+                                            <p class="right-sidebar-feeds-time"> 532 kb</p>
+                                        </div>
+                                        <div class="feed">
+                                            <h2 class="feed-containt">Student Book</h2>
+                                            <p class="feed-tag">Docunmetn</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 63.8668px;"></div>
+                <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.4; z-index: 90; right: 1px;">
+                </div>
+            </div>
+        </div>
+
+        <div id="calender_new_event_slide" class="profile-view">
+            <div class="col-sm-2">
+                <i onclick="calender_new_event_close()" class="fa fa-times header-icon-border"></i>
+            </div>
+            <div class="col-sm-8">
+                <center class="today-form-title">
+                    New Event
+                </center>
+            </div>
+            <div class="col-ms-2">
+
+            </div>
+
+            <!-- <a href="javascript:void(0)" class="closebtn">&times;</a> -->
+
+            <div class="">
+                <div class="form-group">
+                    <label class="col-sm-12">Title <span class="red"> *</span></label>
+                    <div class="col-sm-12">
+                        <div class="m-b">
+                            <input type="text" placeholder="New Event Name" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="col-sm-12">
+                                <label class="">Location<span class="red"> *</span></label>
+                                <div class="input-group m-b">
+                                    <input type="text" placeholder="Columbia Road" class="form-control"><span class="input-group-addon">@</span> </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="">Zip<span class="red"> *</span></label>
+                                <div class="input-group m-b">
+                                    <input type="text" placeholder="77079" class="form-control"><span class="input-group-addon">@</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label class="col-sm-12">Thumbnail Image<span class="red"> *</span></label>
+                            <img src="http://www.getyourbacklinks.com/wp-content/uploads/2012/05/demo-image.jpg" class="img-rounded" alt="Cinque Terre" width="131" height="124">
+                            <button class="add-new-thumb">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                            <span class="click-to-add">ick To addzz </span>
+                        </div>
+                        <!-- <div class="col-sm-2">
+
+                        </div> -->
+
+                    </div>
+                    <label class="col-sm-12 control-label">Location<span class="red"> *</span></label>
+                    <div class="col-sm-12">
+                        <div class="input-group m-b">
+                            <input type="text" class="form-control"> <span class="input-group-addon">.00</span></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-12">Category<span class="red"> *</span></label>
+                    <div class="col-sm-12">
+                        <select class="form-control m-b" name="account">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                            <option>option 3</option>
+                            <option>option 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-12">Tags<span class="red"> *</span></label>
+                    <div class="col-sm-12">
+                        <select class="form-control m-b" name="account">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                            <option>option 3</option>
+                            <option>option 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group" id="data_1">
+                        <label>Start Date<span class="red"> *</span></label>
+                        <div class="input-group date">
+                            <input type="text" class="form-control" value="03/04/2014"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group" id="data_1">
+                        <label>End Date<span class="red"> *</span></label>
+                        <div class="input-group date">
+                            <input type="text" class="form-control" value="03/04/2014"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label>End Date<span class="red"> *</span></label>
+                    <div class="input-group clockpicker" data-autoclose="true">
+                        <input type="text" class="form-control" value="09:30">
+                        <span class="input-group-addon">
+                            <span class="fa fa-clock-o"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label>End Date<span class="red"> *</span></label>
+                    <div class="input-group clockpicker" data-autoclose="true">
+                        <input type="text" class="form-control" value="09:30">
+                        <span class="input-group-addon">
+                            <span class="fa fa-clock-o"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-12">Title<span class="red"> *</span></label>
+                    <div class="col-sm-11">
+                        <select class="form-control m-b" name="account">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                            <option>option 3</option>
+                            <option>option 4</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1">
+                        <button class="btn btn-success btn-xs edit-post-btn" type="button">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="comment">Description<span class="red"> *</span></label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <!-- <input type="file" name="pic" accept="image/*"> -->
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-12">Booking Url<span class="red"> *</span></label>
+                    <div class="col-sm-12">
+                        <div class="m-b">
+                            <input type="text" placeholder="www.newevent.com" class="form-control">
+                        </div>
+                        <br/>
+                        <p class="attachment">
+                            <span><i class="fa fa-paperclip"></i> Add Attachment </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="">
+                <div class="today-form-btn col-sm-12">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-success btn-block btn-outline btn-default">Cancle</button>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-success btn-block ">Create Event</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Data Picker <small>https://github.com/eternicode/bootstrap-datepicker</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <h3>
+                            Data picker
+                        </h3>
+                        <p>
+                            Simple and easy select a time for a text input using your mouse.
+                        </p>
+
+                        <div class="form-group" id="data_1">
+                            <label class="font-normal">Simple data input format</label>
+                            <div class="input-group date">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="data_2">
+                            <label class="font-normal">One Year view</label>
+                            <div class="input-group date">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="08/09/2014">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="data_3">
+                            <label class="font-normal">Decade view</label>
+                            <div class="input-group date">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="10/11/2013">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="data_4">
+                            <label class="font-normal">Month select</label>
+                            <div class="input-group date">
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="data_5">
+                            <label class="font-normal">Range select</label>
+                            <div class="input-daterange input-group" id="datepicker">
+                                <input type="text" class="input-sm form-control" name="start" value="05/14/2014">
+                                <span class="input-group-addon">to</span>
+                                <input type="text" class="input-sm form-control" name="end" value="05/22/2014">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>ClockPicker <small>http://weareoutman.github.io/clockpicker/</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <h3>
+                            ClockPicker
+                        </h3>
+                        <p>
+                            A clock-style timepicker for Bootstrap (or jQuery).
+                        </p>
+
+                        <div class="input-group clockpicker" data-autoclose="true">
+                            <input type="text" class="form-control" value="09:30">
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Date Range Picker <small>http://www.daterangepicker.com/</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <h3>
+                            Date Range Picker
+                        </h3>
+                        <p>
+                            A JavaScript widget for choosing date ranges.
+                            Designed to work with the Bootstrap CSS framework.
+                        </p>
+
+                        <input class="form-control" type="text" name="daterange" value="01/01/2015 - 01/31/2015">
+
+                        <h4>All options example</h4>
+                        <div id="reportrange" class="form-control">
+                            <i class="fa fa-calendar"></i>
+                            <span></span> <b class="caret"></b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title  back-change">
+                    <h5>Color picker <small>http://mjolnic.github.io/bootstrap-colorpicker/</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <h3>
+                            Colorpicker
+                        </h3>
+                        <p>
+                            Colorpicker plugin for the Twitter Bootstrap toolkit.
+                        </p>
+
+                        <h5>As normal input</h5>
+                        <input type="text" class="form-control demo1 colorpicker-element" value="#5367ce">
+                        <h5>As a link</h5>
+                        <a data-color="rgb(255, 255, 255)" id="demo_apidemo" class="btn btn-white btn-block colorpicker-element" href="#">Change background color</a>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Flot -->
+        <script src="js/plugins/flot/jquery.flot.js"></script>
+        <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+        <script src="js/flowzoo.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+
+        <!-- Input Mask-->
+        <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+        <!-- Date range use moment.js same as full calendar plugin -->
+        <script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+        <!-- jQuery UI  -->
+        <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+        <!-- Data picker -->
+        <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+        <!-- Switchery -->
+        <!-- <script src="js/plugins/switchery/switchery.js"></script> -->
+
+
+        <!-- IonRangeSlider -->
+        <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js"></script>
+        
+        <!-- Color picker -->
+        <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+
+        <!-- Clock picker -->
+        <script src="js/plugins/clockpicker/clockpicker.js"></script>
+         
+        <!-- Image cropper -->
+        <script src="js/plugins/cropper/cropper.min.js"></script>
+
+        <!-- Date range picker -->
+        <script src="js/daterangepicker.js"></script>
+        
+        <!-- Tags Input -->
+        <script src="js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+
+        <!-- Jasny -->
+        <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    
+        <!-- DROPZONE -->
+        <script src="js/plugins/dropzone/dropzone.js"></script>
+
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+        <!-- Full Calendar -->
+        <script src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+        <!-- Date range picker -->
+        <script src="js/daterangepicker.js"></script>
+
+         <!-- klassapp custom js -->
+         <script src="js/klassapp.js"></script>
+
+         <!-- <script type="text/javascript">
+            $('#calendar').fullCalendar({
+                events: [
+                  {
+                    title: 'My Event',
+                    start: '2018-05-25',
+                    description: 'This is a cool event'
+                  }
+                  // more events here
+                ],
+                eventRender: function(event, element) {
+                  element.qtip({
+                    content: event.description
+                  });
+                }
+              });
+               -->
+        </script> 
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+    
+                $('.tagsinput').tagsinput({
+                    tagClass: 'label label-primary'
+                });
+    
+                var $image = $(".image-crop > img")
+                $($image).cropper({
+                    aspectRatio: 1.618,
+                    preview: ".img-preview",
+                    done: function(data) {
+                        // Output the result data for cropping image.
+                    }
+                });
+    
+                var $inputImage = $("#inputImage");
+                if (window.FileReader) {
+                    $inputImage.change(function() {
+                        var fileReader = new FileReader(),
+                            files = this.files,
+                            file;
+    
+                        if (!files.length) {
+                            return;
+                        }
+    
+                        file = files[0];
+    
+                        if (/^image\/\w+$/.test(file.type)) {
+                            fileReader.readAsDataURL(file);
+                            fileReader.onload = function() {
+                                $inputImage.val("");
+                                $image.cropper("reset", true).cropper("replace", this.result);
+                            };
+                        } else {
+                            showMessage("Please choose an image file.");
+                        }
+                    });
+                } else {
+                    $inputImage.addClass("hide");
+                }
+    
+                $("#download").click(function() {
+                    window.open($image.cropper("getDataURL"));
+                });
+    
+                $("#zoomIn").click(function() {
+                    $image.cropper("zoom", 0.1);
+                });
+    
+                $("#zoomOut").click(function() {
+                    $image.cropper("zoom", -0.1);
+                });
+    
+                $("#rotateLeft").click(function() {
+                    $image.cropper("rotate", 45);
+                });
+    
+                $("#rotateRight").click(function() {
+                    $image.cropper("rotate", -45);
+                });
+    
+                $("#setDrag").click(function() {
+                    $image.cropper("setDragMode", "crop");
+                });
+    
+                $('#data_1 .input-group.date').datepicker({
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    calendarWeeks: true,
+                    autoclose: true
+                });
+    
+                $('#data_2 .input-group.date').datepicker({
+                    startView: 1,
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    autoclose: true,
+                    format: "dd/mm/yyyy"
+                });
+    
+                $('#data_3 .input-group.date').datepicker({
+                    startView: 2,
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    autoclose: true
+                });
+    
+                $('#data_4 .input-group.date').datepicker({
+                    minViewMode: 1,
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    forceParse: false,
+                    autoclose: true,
+                    todayHighlight: true
+                });
+    
+                $('#data_5 .input-daterange').datepicker({
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    autoclose: true
+                });
+    
+                // var elem = document.querySelector('.js-switch');
+                // var switchery = new Switchery(elem, {
+                //     color: '#1AB394'
+                // });
+    
+                var elem_2 = document.querySelector('.js-switch_2');
+                // var switchery_2 = new Switchery(elem_2, {
+                //     color: '#ED5565'
+                // });
+    
+                var elem_3 = document.querySelector('.js-switch_3');
+                // var switchery_3 = new Switchery(elem_3, {
+                //     color: '#1AB394'
+                // });
+    
+                var elem_4 = document.querySelector('.js-switch_4');
+                // var switchery_4 = new Switchery(elem_4, {
+                //     color: '#f8ac59'
+                // });
+                // switchery_4.disable();
+    
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green'
+                });
+    
+                $('.demo1').colorpicker();
+    
+                // var divStyle = $('.back-change')[0].style;
+                // $('#demo_apidemo').colorpicker({
+                //     color: divStyle.backgroundColor
+                // }).on('changeColor', function(ev) {
+                //     divStyle.backgroundColor = ev.color.toHex();
+                // });
+    
+                $('.clockpicker').clockpicker();
+    
+                $('input[name="daterange"]').daterangepicker();
+    
+                $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    
+                $('#reportrange').daterangepicker({
+                    format: 'MM/DD/YYYY',
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment(),
+                    minDate: '01/01/2012',
+                    maxDate: '12/31/2015',
+                    dateLimit: {
+                        days: 60
+                    },
+                    showDropdowns: true,
+                    showWeekNumbers: true,
+                    timePicker: false,
+                    timePickerIncrement: 1,
+                    timePicker12Hour: true,
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    opens: 'right',
+                    drops: 'down',
+                    buttonClasses: ['btn', 'btn-sm'],
+                    applyClass: 'btn-primary',
+                    cancelClass: 'btn-default',
+                    separator: ' to ',
+                    locale: {
+                        applyLabel: 'Submit',
+                        cancelLabel: 'Cancel',
+                        fromLabel: 'From',
+                        toLabel: 'To',
+                        customRangeLabel: 'Custom',
+                        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                        firstDay: 1
+                    }
+                }, function(start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                });
+    
+                // $(".select2_demo_1").select2();
+                // $(".select2_demo_2").select2();
+                // $(".select2_demo_3").select2({
+                //     placeholder: "Select a state",
+                //     allowClear: true
+                // });
+    
+                // $(".touchspin1").TouchSpin({
+                //     buttondown_class: 'btn btn-white',
+                //     buttonup_class: 'btn btn-white'
+                // });
+    
+                // $(".touchspin2").TouchSpin({
+                //     min: 0,
+                //     max: 100,
+                //     step: 0.1,
+                //     decimals: 2,
+                //     boostat: 5,
+                //     maxboostedstep: 10,
+                //     postfix: '%',
+                //     buttondown_class: 'btn btn-white',
+                //     buttonup_class: 'btn btn-white'
+                // });
+    
+                // $(".touchspin3").TouchSpin({
+                //     verticalbuttons: true,
+                //     buttondown_class: 'btn btn-white',
+                //     buttonup_class: 'btn btn-white'
+                // });
+    
+                // $('.dual_select').bootstrapDualListbox({
+                //     selectorMinimalHeight: 160
+                // });
+    
+            });
+    
+            // $('.chosen-select').chosen({
+            //     width: "100%"
+            // });
+    
+            $("#ionrange_1").ionRangeSlider({
+                min: 0,
+                max: 5000,
+                type: 'double',
+                prefix: "$",
+                maxPostfix: "+",
+                prettify: false,
+                hasGrid: true
+            });
+    
+            $("#ionrange_2").ionRangeSlider({
+                min: 0,
+                max: 10,
+                type: 'single',
+                step: 0.1,
+                postfix: " carats",
+                prettify: false,
+                hasGrid: true
+            });
+    
+            $("#ionrange_3").ionRangeSlider({
+                min: -50,
+                max: 50,
+                from: 0,
+                postfix: "°",
+                prettify: false,
+                hasGrid: true
+            });
+    
+            $("#ionrange_4").ionRangeSlider({
+                values: [
+                    "January", "February", "March",
+                    "April", "May", "June",
+                    "July", "August", "September",
+                    "October", "November", "December"
+                ],
+                type: 'single',
+                hasGrid: true
+            });
+    
+            $("#ionrange_5").ionRangeSlider({
+                min: 10000,
+                max: 100000,
+                step: 100,
+                postfix: " km",
+                from: 55000,
+                hideMinMax: true,
+                hideFromTo: false
+            });
+    
+            // $(".dial").knob();
+    
+            var basic_slider = document.getElementById('basic_slider');
+    
+            // noUiSlider.create(basic_slider, {
+            //     start: 40,
+            //     behaviour: 'tap',
+            //     connect: 'upper',
+            //     range: {
+            //         'min': 20,
+            //         'max': 80
+            //     }
+            // });
+    
+            var range_slider = document.getElementById('range_slider');
+    
+            // noUiSlider.create(range_slider, {
+            //     start: [40, 60],
+            //     behaviour: 'drag',
+            //     connect: true,
+            //     range: {
+            //         'min': 20,
+            //         'max': 80
+            //     }
+            // });
+    
+            var drag_fixed = document.getElementById('drag-fixed');
+    
+            // noUiSlider.create(drag_fixed, {
+            //     start: [40, 60],
+            //     behaviour: 'drag-fixed',
+            //     connect: true,
+            //     range: {
+            //         'min': 20,
+            //         'max': 80
+            //     }
+            // });
+        </script>
+    
+
+        <script>
+            $("#calendar").fullCalendar({
+                header: {
+                    left: 'title',
+                    center: 'customDay,customWeek,customMonth,customYear,listYear',
+                    right: 'prev,today,next'
+                },
+                views: {
+                    customDay: {
+                        type: 'agenda',
+                        duration: {
+                            day: 1
+                        },
+                        buttonText: 'Day'
+                    },
+                    customWeek: {
+                        type: 'agenda',
+                        duration: {
+                            weeks: 1
+                        },
+                        buttonText: 'Week'
+                    },
+                    customMonth: {
+                        type: 'basic',
+                        duration: {
+                            months: 1
+                        },
+                        buttonText: 'Month'
+                    },
+                    customYear: {
+                        type: 'basic',
+                        duration: {
+                            years: 1
+                        },
+                        buttonText: 'Year'
+                    },
+                },
+
+
+
+                 // Add events
+                 editable: true, // event resources editable by default
+
+                            events: [
+                        {
+                        // startEditable : '12"00',
+
+                        title  : 'event1qq',
+                        start:  '2018-05-03T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1',
+                        description: 'This is a cool event'
+
+                        },
+
+                        {                       
+                        title  : 'Audience',
+                        start:  '2018-05-14',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#F5CD47'
+
+                        },
+                        {                       
+                        title  : 'Confrence',
+                        start:  '2018-05-14',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+
+                        },
+                        {                        
+                        title  : 'Metup',
+                        start:  '2018-05-14',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-16T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+
+                        },
+                        {                        
+                        title  : 'event1',
+                        start:  '2018-05-16T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-25T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+
+                        },
+                        {                        
+                        title  : 'event1',
+                        start:  '2018-05-25T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-29T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+
+                        },
+                        {                        
+                        title  : 'event1',
+                        start:  '2018-05-29T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-31T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+
+                        },
+                        {                        
+                        title  : 'event1',
+                        start:  '2018-05-31T14:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+
+                        {
+                        title  : 'event2',
+                        start  : '2010-01-05',
+                        end    : '2010-01-07'
+                        },
+
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-15T06:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-15T06:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+
+                        },
+
+                        {                       
+                        title  : 'event1',
+                        start:  '2018-05-13T16:30:00',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#04A1EF'
+
+                        },
+
+                        {                       
+                        title  : 'event-zzzz',
+                        start:  '2018-05-23T16:30:00',
+                        description: 'This is a cool event',
+                        backgroundColor: '#EFF3F6',
+                        textColor: '#334150',
+                        borderColor:'#CF84E1'
+                        
+                        },
+
+                    ],
+
+                eventRender: function(event, element,calEvent) {
+                //here i am adding icon next to title
+                // console.log(event);
+                element.find(".fc-title").after($("<br/><span class=\"fc-event-icons e-ic\"></span>").html("<img class=\"e-ic\" src=\"img/Avatar(2).png\" /><img class=\"e-ic\" src=\"img/Avatar(1).png\" /><img class=\"e-ic\" src=\"img/Avatar.png\" /><div class=\"total-images\">+256</div>"));
+                }
+
+
+
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green'
+                });
+
+                /* initialize the external events
+                 -----------------------------------------------------------------*/
+
+                $('#external-events div.external-event').each(function() {
+
+                    // store data so the calendar knows to render an event upon drop
+                    $(this).data('event', {
+                        title: $.trim($(this).text()), // use the element's text as the event title
+                        stick: true // maintain when user navigates (see docs on the renderEvent method)
+                    });
+
+                    // make the event draggable using jQuery UI
+                    $(this).draggable({
+                        zIndex: 1111999,
+                        revert: true, // will cause the event to go back to its
+                        revertDuration: 0 //  original position after the drag
+                    });
+
+                });
+
+                /* initialize the calendar
+                 -----------------------------------------------------------------*/
+                var date = new Date();
+                var d = date.getDate();
+                var m = date.getMonth();
+                var y = date.getFullYear();
+
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
+                    },
+                    editable: true,
+                    droppable: true, // this allows things to be dropped onto the calendar
+                    drop: function() {
+                        // is the "remove after drop" checkbox checked?
+                        if ($('#drop-remove').is(':checked')) {
+                            // if so, remove the element from the "Draggable Events" list
+                            $(this).remove();
+                        }
+                    },
+                    events: [{
+                        title: 'All Day Event',
+                        start: new Date(y, m, 1)
+                    }, {
+                        title: 'Long Event',
+                        start: new Date(y, m, d - 5),
+                        end: new Date(y, m, d - 2)
+                    }, {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d - 3, 16, 0),
+                        allDay: false
+                    }, {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d + 4, 16, 0),
+                        allDay: false
+                    }, {
+                        title: 'Meeting',
+                        start: new Date(y, m, d, 10, 30),
+                        allDay: false
+                    }, {
+                        title: 'Lunch',
+                        start: new Date(y, m, d, 12, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false
+                    }, {
+                        title: 'Birthday Party',
+                        start: new Date(y, m, d + 1, 19, 0),
+                        end: new Date(y, m, d + 1, 22, 30),
+                        allDay: false
+                    }, {
+                        title: 'Click for Google',
+                        start: new Date(y, m, 28),
+                        end: new Date(y, m, 29),
+                        url: 'http://google.com/'
+                    }]
+                });
+
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                // setTimeout(function() {
+                //     toastr.options = {
+                //         closeButton: true,
+                //         progressBar: true,
+                //         showMethod: 'slideDown',
+                //         timeOut: 4000
+                //     };
+                //     toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+
+                // }, 1300);
+
+                var data1 = [
+                    [0, 4],
+                    [1, 8],
+                    [2, 5],
+                    [3, 10],
+                    [4, 4],
+                    [5, 16],
+                    [6, 5],
+                    [7, 11],
+                    [8, 6],
+                    [9, 11],
+                    [10, 30],
+                    [11, 10],
+                    [12, 13],
+                    [13, 4],
+                    [14, 3],
+                    [15, 3],
+                    [16, 6]
+                ];
+                var data2 = [
+                    [0, 1],
+                    [1, 0],
+                    [2, 2],
+                    [3, 0],
+                    [4, 1],
+                    [5, 3],
+                    [6, 1],
+                    [7, 5],
+                    [8, 2],
+                    [9, 3],
+                    [10, 2],
+                    [11, 1],
+                    [12, 0],
+                    [13, 2],
+                    [14, 8],
+                    [15, 0],
+                    [16, 0]
+                ];
+                $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                    data1, data2
+                ], {
+                    series: {
+                        lines: {
+                            show: false,
+                            fill: true
+                        },
+                        splines: {
+                            show: true,
+                            tension: 0.4,
+                            lineWidth: 1,
+                            fill: 0.4
+                        },
+                        points: {
+                            radius: 0,
+                            show: true
+                        },
+                        shadowSize: 2
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+                        tickColor: "#d5d5d5",
+                        borderWidth: 1,
+                        color: '#d5d5d5'
+                    },
+                    colors: ["#1ab394", "#1C84C6"],
+                    xaxis: {},
+                    yaxis: {
+                        ticks: 4
+                    },
+                    tooltip: false
+                });
+
+                var doughnutData = {
+                    labels: ["App", "Software", "Laptop"],
+                    datasets: [{
+                        data: [300, 50, 100],
+                        backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                    }]
+                };
+
+                var doughnutOptions = {
+                    responsive: false,
+                    legend: {
+                        display: false
+                    }
+                };
+
+                // var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+                // new Chart(ctx4, {
+                //     type: 'doughnut',
+                //     data: doughnutData,
+                //     options: doughnutOptions
+                // });
+
+                var doughnutData = {
+                    labels: ["App", "Software", "Laptop"],
+                    datasets: [{
+                        data: [70, 27, 85],
+                        backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                    }]
+                };
+
+                var doughnutOptions = {
+                    responsive: false,
+                    legend: {
+                        display: false
+                    }
+                };
+
+                // var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
+                // new Chart(ctx4, {
+                //     type: 'doughnut',
+                //     data: doughnutData,
+                //     options: doughnutOptions
+                // });
+
+            });
+        </script>
+
+</body>
+
+</html>
